@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --background: #090a0f;
+  --foreground: #f1f5f9;
+  --card-bg: #10131c;
+  --card-border: rgba(255, 255, 255, 0.08);
+  --card-hover-border: rgba(34, 211, 238, 0.25);
+  --accent-cyan: #22d3ee;
+  --accent-indigo: #818cf8;
+  --accent-emerald: #10b981;
+  --text-muted: #94a3b8;
+  --header-bg: rgba(9, 10, 15, 0.85);
+  color-scheme: dark;
+}
+
+html:not(.dark) {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --card-bg: #ffffff;
+  --card-border: rgba(0, 0, 0, 0.08);
+  --card-hover-border: rgba(6, 182, 212, 0.4);
+  --text-muted: #475569;
+  --header-bg: rgba(248, 250, 252, 0.85);
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  overflow-x: hidden;
+  transition: background-color 0.3s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  scrollbar-color: rgba(148, 163, 184, 0.3) transparent;
+}
+
+/* Subtle grid background pattern */
+.ai-grid-pattern {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+html:not(.dark) .ai-grid-pattern {
+  background-image: 
+    linear-gradient(to right, rgba(15, 23, 42, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 23, 42, 0.04) 1px, transparent 1px);
+}
+
+/* Subtle radial glow */
+.hero-glow {
+  background: radial-gradient(circle at 50% 30%, rgba(34, 211, 238, 0.08) 0%, rgba(99, 102, 241, 0.05) 35%, transparent 70%);
+}
+
+html:not(.dark) .hero-glow {
+  background: radial-gradient(circle at 50% 30%, rgba(6, 182, 212, 0.06) 0%, rgba(99, 102, 241, 0.04) 35%, transparent 70%);
+}
+
+/* Scrollbar styles */
+@supports not (scrollbar-color: auto) {
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(148, 163, 184, 0.25);
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(148, 163, 184, 0.45);
+  }
+}
+
+/* Glassmorphism helpers */
+.glass-nav {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  background-color: var(--header-bg);
+}
+
+.card-glass {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-glass:hover {
+  border-color: var(--card-hover-border);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3), 0 0 20px -5px rgba(34, 211, 238, 0.08);
+}
