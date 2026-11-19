@@ -30,9 +30,9 @@ export const siteConfig = {
     "Amazon Client Engagement",
   ],
   socials: {
-    github: "https://github.com/shazin-ansari",
-    linkedin: "https://linkedin.com/in/shazin-ansari",
-    email: "shazin.ansari.ai@gmail.com",
+    github: "https://github.com/shazin21",
+    linkedin: "https://www.linkedin.com/in/shazinansari",
+    email: "shazinansari1@gmail.com",
   },
   location: "Open to opportunities in UAE, India, and internationally",
 };

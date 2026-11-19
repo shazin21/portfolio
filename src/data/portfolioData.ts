@@ -24,10 +24,10 @@ export const personalInfo = {
   ],
   contactHeading: "Let's Build Something Intelligent.",
   contactDescription:
-    "I'm open to opportunities in AI Engineering, Generative AI, LLM applications, AI research, and applied machine learning. If you're building something interesting or looking for someone with hands-on AI experience, let's connect.",
-  email: "shazin.ansari.ai@gmail.com", // [INSERT EMAIL] placeholder configured
-  linkedinUrl: "https://linkedin.com/in/shazin-ansari", // [INSERT LINKEDIN URL] placeholder
-  githubUrl: "https://github.com/shazin-ansari", // [INSERT GITHUB URL] placeholder
+    "I'm open to opportunities in AI Engineering,Data Engineering, Generative AI, LLM applications, AI research, and applied machine learning. If you're building something interesting or looking for someone with hands-on AI experience, let's connect.",
+  email: "shazinansari1@gmail.com",
+  linkedinUrl: "https://www.linkedin.com/in/shazinansari",
+  githubUrl: "https://github.com/shazin21",
   location: "Open to opportunities in UAE, India, and internationally.",
   resumeFileName: "Shazin_Ansari_AI_Engineer_Resume.pdf",
 };
